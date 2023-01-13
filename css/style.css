@@ -17,14 +17,13 @@ h1{
     color: #75B79E;
 }
 .cardboard{
-    width: 1300px;
-    height: 500px;
+    width: 1200px;
+    height: 650px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 60px;
-    background-color: blue;
+    padding: 50px;
 }
 .card{
     margin-left: 40px;
@@ -65,4 +64,23 @@ h1{
 }
 .selecionado{
     opacity: 0;
+}
+
+@media(max-width: 612px){
+    h1{
+        width: 312px;
+        height: 63px;
+        font-size: 36px;
+    }
+    .cardboard{
+        width: 100%;
+        height: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card{
+        margin-bottom: 40px;
+        margin-left: 0px;
+    }
 }
