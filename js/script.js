@@ -47,8 +47,8 @@ function verificarJogada(){
 
     if(listaCartasViradas[0][1] == listaCartasViradas[1][1]){
         parDeCartasViradas++;
-        console.log("QUANTIDADE DE PAR DE CARTAS VIRADAS: \n" + parDeCartasViradas);
-        console.log("QUANTIDADE DE CARTAS DIVIDO POR DOIS: \n" + qtdCartas/2);
+        // console.log("QUANTIDADE DE PAR DE CARTAS VIRADAS: \n" + parDeCartasViradas);
+        // console.log("QUANTIDADE DE CARTAS DIVIDO POR DOIS: \n" + qtdCartas/2);
 
         if(parDeCartasViradas == (qtdCartas / 2)){
             alert(`Você ganhou em ${qtdJogadas} jogadas!`);
