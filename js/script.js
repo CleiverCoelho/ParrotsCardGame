@@ -117,11 +117,11 @@ function comparador(){
     return Math.random() - 0.5;
 }
 function adicionaNoHtml(cardBoard, imagemCarta){
-    cardBoard.innerHTML = cardBoard.innerHTML + `<div onclick="realizarJogada(this)" class="card">
-        <div class="front-face face">
+    cardBoard.innerHTML = cardBoard.innerHTML + `<div data-test="card" onclick="realizarJogada(this)" class="card">
+        <div data-test="face-down-image" class="front-face face">
             <img src="${cartaImagemPadrao}">
         </div>
-        <div class="back-face face">
+        <div data-test="face-up-image" class="back-face face">
             <img src="${imagemCarta}">
         </div>
     </div>`;
