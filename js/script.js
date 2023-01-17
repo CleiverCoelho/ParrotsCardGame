@@ -10,13 +10,23 @@ const listaCartasViradas = [];
 let qtdJogadas = 0;
 let qtdCartas = 0;
 let parDeCartasViradas = 0;
+let flagJogada = 0;
+
 carregarCardBoard();
 
 
 // aqui acaba codigo de configuracao de jogo. start!
 
-function realizarJogada(cartaSelecionada){
+function realizarJogada(cartaSelecionada){4
 
+    if(cartaSelecionada.classList.contains("virada")){
+        return;
+    }
+
+    if(flagJogada == 2){
+        return null;
+    }
+    flagJogada++;
     const listaJogada = [];
     const opcaoImagens = document.querySelectorAll(".back-face img");
     let indice = 0;
@@ -39,7 +49,7 @@ function realizarJogada(cartaSelecionada){
     }
     qtdJogadas++;
     if(listaCartasViradas.length == 2){
-        setTimeout(verificarJogada, 1000);
+        setTimeout(verificarJogada, 1000);        
     }
 }
 
@@ -66,6 +76,8 @@ function verificarJogada(){
     while(listaCartasViradas.length){
         listaCartasViradas.pop();
     }
+
+    flagJogada = 0;
 }
 
 
